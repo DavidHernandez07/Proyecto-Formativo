@@ -1,26 +1,16 @@
-@extends('adminlte::page')
 
-@section('title','start')
-
-@section('content_header')
-<h1>DaAnJu Cost System</h1>
-@stop
-
-@section('content')
     <div class="card">
        <div class="card-header">
           <h1 class="card-title">Inicio</h1>
       </div>
       <div class="card-body">
            <p></p>
+           <a class="fa fa-power-off btn btn-danger" href="{{ route('logout') }}"
+                     onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();"> Cerrar Sesión</a>
+                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                 @csrf
+               </form>
       </div>
    </div>
-@stop
-@section('css')
-<link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-@section('js')
-<script>
-  console.log('Hi!');
-</script>
-@stop
+   
