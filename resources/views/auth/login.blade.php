@@ -94,7 +94,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
             </form>
-            <p>Si aun no tienes una cuenta<a href="{{route('register')}}">Registrar</a></p>
+            <p>Si aun no tienes una cuenta? <a href="{{route('register')}}">Registrar</a></p>
 
             <footer class="page-copyright page-copyright-inverse">
                 <p>WEBSITE BY Creation Studio</p>
