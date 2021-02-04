@@ -57,7 +57,6 @@ Route::middleware('auth')->delete('deleteManoObra/{ficha_tecnica_id}/{mano_de_ob
 Route::middleware('auth')->get('calcularCosto/{ficha_tecnica_id}','FichaTecnicaController@calcularCosto')->name('ficha_tecnica.calcularCosto');
 
 
-
 Route::middleware('auth')->get('nombre', function(){
 	//echo var_dump(Auth::user()->roles()->get());
 });
@@ -65,3 +64,8 @@ Route::middleware('auth')->get('nombre', function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Perfil
+Route::get('perfil', 'UserController@perfil');
+Route::post('perfil', 'UserController@subir_perfil');
+Route::post('perfil', 'UserController@store');
