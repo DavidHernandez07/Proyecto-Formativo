@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\User;
 use App\Role;
+use Auth;
+use Image;
 
 class UserController extends Controller
 {
@@ -28,6 +31,7 @@ class UserController extends Controller
     public function create()
     {
         //
+         return view('perfil');
     }
 
     /**
@@ -39,6 +43,11 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+       $user= new User();
+       $user->telefono=$request->telefono;
+       $user->direccion=$request->direccion;
+       $user->save();
+       return redirect('/perfil');
     }
 
     /**
@@ -100,5 +109,29 @@ class UserController extends Controller
         $user = User::find($user_id);
         $user->roles()->sync([$role_id]);
         return redirect()->route('user.index',['user'=>$user_id]);
+    }
+
+      public function perfil(){
+        return view('perfil', array('user' => Auth::user()) );
+    }
+
+     public function subir_perfil(Request $request){
+            
+            $user =User::find(Auth::User()->id);
+            if($request->hasFile('icono')){
+            $avatar = $request->file('icono');
+            $filename = $avatar->getClientOriginalName();
+            $avatar->move(public_path("/imagenes/"),$filename);
+            $user->avatar =$filename;
+            }
+            if(empty($user)){
+            Flash::error('mensaje error');
+            return redirect()->back();
+            }
+            $user->fill($request->all());
+            $user->save();
+
+            return redirect('/perfil')->with("success","Datos Actualizados Correctamente");
+
     }
 }
