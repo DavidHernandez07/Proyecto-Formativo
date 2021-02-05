@@ -66,7 +66,7 @@
             <form method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="form-group form-material floating" data-plugin="formMaterial">
-                    <input id="email" type="email" class="form-control form-control-user @error('email') is-invalid @enderror" value="{{ old('email') }}" name="email" required autocomplete="email" autofocus placeholder="Correo Electronico">
+                    <input id="email" type="email" class="form-control empty form-control-user @error('email') is-invalid @enderror" value="{{ old('email') }}" name="email" required autocomplete="email" autofocus placeholder="Correo Electronico">
                     @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>

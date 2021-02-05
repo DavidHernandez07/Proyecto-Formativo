@@ -70,7 +70,7 @@
           <i class="icon md-more" aria-hidden="true"></i>
         </button>
         <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
-          <img class="navbar-brand-logo" src="img/logo.png" title="Remark">
+          <img class="navbar-brand-logo" src="img/logo.png" title="DaAnJu Cost System">
           <span class="navbar-brand-text hidden-xs-down"> DaAnJu Cost System</span>
         </div>
         <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
@@ -351,9 +351,9 @@
                     </a>
               </li>
               <li class="site-menu-item ">
-                <a class="animsition-link" href="{{route('user.index')}}">
+                <a class="animsition-link" href="{{route('gestion_usuario.index')}}">
                         <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                        <span class="site-menu-title">Gestion de Usuarios</span>
+                        <span class="site-menu-title">Gestion de Empleados</span>
                     </a>
               </li>
               @endif
@@ -367,6 +367,12 @@
                 <a class="animsition-link" href="{{route('mano_de_obra.index')}}">
                         <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
                         <span class="site-menu-title">Mano de Obra</span>
+                    </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="{{route('cifs.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Gestión de Cifs</span>
                     </a>
               </li>
               <li class="site-menu-item">
