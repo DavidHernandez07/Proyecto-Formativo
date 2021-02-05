@@ -42,11 +42,6 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
-       $user= new User();
-       $user->telefono=$request->telefono;
-       $user->direccion=$request->direccion;
-       $user->save();
-       return redirect('/perfil');
     }
 
     /**
