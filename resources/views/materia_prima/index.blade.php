@@ -243,7 +243,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
                             <span class="avatar avatar-online">
-                                <img src="../../../global/portraits/5.jpg" alt="...">
+                                <img src="/imagenes/{{ Auth::user()->avatar }}" alt="...">
                                 <i></i>
                             </span>
                         </a>
@@ -315,49 +315,55 @@
                             </a>
                         </li>
                         <li class="site-menu-item">
-                            <a class="animsition-link" href="{{route('panaderia.index')}}">
-                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                                <span class="site-menu-title">Registro Panaderia</span>
-                            </a>
-                        </li>
-                        @if (Auth::user()->tieneRole('Super Administrador'))
-                        <li class="site-menu-item ">
-                            <a class="animsition-link" href="{{route('role.index')}}">
-                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                                <span class="site-menu-title">Gestion de Roles</span>
-                            </a>
-                        </li>
-                        <li class="site-menu-item ">
-                            <a class="animsition-link" href="{{route('gestion_usuario.index')}}">
-                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                                <span class="site-menu-title">Gestion de Empleados</span>
-                            </a>
-                        </li>
-                        @endif
-                        <li class="site-menu-item ">
-                            <a class="animsition-link" href="{{route('materia_prima.index')}}">
-                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                                <span class="site-menu-title">Materia Prima</span>
-                            </a>
-                        </li>
-                        <li class="site-menu-item">
-                            <a class="animsition-link" href="{{route('mano_de_obra.index')}}">
-                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                                <span class="site-menu-title">Mano de Obra</span>
-                            </a>
-                        </li>
-                        <li class="site-menu-item">
-                            <a class="animsition-link" href="{{route('cifs.index')}}">
-                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                                <span class="site-menu-title">Gestión de Cifs</span>
-                            </a>
-                        </li>
-                        <li class="site-menu-item">
-                            <a class="animsition-link" href="{{route('ficha_tecnica.index')}}">
-                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                                <span class="site-menu-title">Ficha Tecnica</span>
-                            </a>
-                        </li>
+                <a class="animsition-link" href="{{route('panaderia.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Registro Panaderia</span>
+                    </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="{{route('user.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Gestion de Usuarios</span>
+                    </a>
+              </li>
+               @if (Auth::user()->tieneRole('Super Administrador'))
+              <li class="site-menu-item ">
+                <a class="animsition-link" href="{{route('role.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Gestion de Roles</span>
+                    </a>
+              </li>
+              <li class="site-menu-item ">
+                <a class="animsition-link" href="{{route('gestion_usuario.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Gestion de Empleados</span>
+                    </a>
+              </li>
+              @endif
+              <li class="site-menu-item ">
+                <a class="animsition-link" href="{{route('materia_prima.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Materia Prima</span>
+                    </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="{{route('mano_de_obra.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Mano de Obra</span>
+                    </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="{{route('cifs.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Gestión de Cifs</span>
+                    </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="{{route('ficha_tecnica.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Ficha Tecnica</span>
+                    </a>
+              </li>
                     </ul>
                     </li>
                     </ul>
@@ -369,177 +375,80 @@
 
     <!-- Page -->
     <div class="page">
-        <div class="page-header">
-            <h1 class="page-title">Menubar Disable Hover</h1>
-        </div>
+  <div class="page-header">
+    <h1 class="page-title">Lista de Materia Prima Registrada en DaAnJu</h1>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a>Inicio</a></li>
+      <li class="breadcrumb-item"><a>Gestion de Materia Prima</a></li>
+  </ol>
+</div>
 
-        <div class="page-content">
-            <div class="panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title">DEMO CONTENT</h3>
-                </div>
-                <div class="panel-body">
-                    <p>Liberatione, pueros dissentio athenis inventore morborum efficiat facere
-                        conspiratione sensibus diu. Oritur maxime ullius pertinacia commodi
-                        lectorem primus talem explicatam, erroribus aiebat male torquem num
-                        sapientiam sollicitudines tollitur, summis mutans pariuntur, paene
-                        memoria affecta cura aequum, libidinum segnitiae atomi diu molestiae.
-                        Placebit protervi beatae arbitrarer velim sitisque omnino operosam,
-                        vicinum sermo utilitatibus, sapientes, tali, cumanum animal peccandi,
-                        libidinum leniat voluptas ornatum. Temperantiam, desiderat accedunt
-                        expetenda diis fuerit cupiditate incidant liberamur antipatrum. Angere
-                        meque deorum. Domo acute parta atilii percipit fortunam. Consuetudinum,
-                        perturbari geometrica aliena. Animumque dicant dicat magna menandri.
-                        Depulsa gloriae civibus. Importari civitatis exercitumque dicit sentiamus
-                        iucundum libro perfecto aliter quod, sedentis contemnere mediocrium
-                        fatemur linguam molestiam ignota, inportuno quot suscepi disputata
-                        sententiam. Saluti dominorum percipi legum ipso videri impediri utroque
-                        mediocrium. Expetenda expediunt, ornatus crudeli infinitis logikh
-                        delectatum insatiabiles fonte fruitur, manus hominum probarem parum
-                        copiosae. Iudicem nec acri recordamur detractio angoribus partes,
-                        persecuti, singulis repellere contineri aequitatem, possent ignem
-                        vita eidola. Dictum praesidium commodi cupiditate dissentio voce,
-                        fugiendam tueri panaetium conspiratione hausta cognitione notionem.
-                        Solam doctiores democriti verbis. Fieri finxerat huic audaces despicationes.
-                        Umbram diligi synephebos, nemo oporteat horrida memoriter sensu inanitate
-                        dolorem, dices ingenii commemorandis. Texit sapiens quicquam vidisse
-                        semper utrumque calere, appellantur exedunt incursione invenerit.</p>
-                    <p>Vivendo poenis odio repellendus adhibuit saepti, voluptatum. Utramque
-                        earum iudicari alienus. Elegantis consistat disputationi nostrum
-                        potiendi ipso sitne alliciat. Perfecto dixissem bene horum amoris
-                        pararetur gravitate hac corrupisti, aequi eoque malorum torquate
-                        octavio, laudandis ullius placet illustriora distrahi incurrunt laus
-                        aptius beatam explicatis. Hoc fungimur mererer. Torqueantur viveremus
-                        primus omnia p satisfacit evolvendis subtilius aristotele. Desiderent
-                        quaestionem didicisse suscipit ei fruenda animum exercitationem,
-                        firmissimum intellegam tollitur conformavit caelo ludus convenire,
-                        iudicant delectat negent attento, civitas sic inmensae saluto. Numen
-                        splendide universas dein diogenem sustulisti locum illam, invitat
-                        torquatos terminari continent peccant explicari delapsa statue susciperet,
-                        molestia libidinibus emolumenti cupiditatum choro referatur displicet
-                        maximi diligamus torquentur, sollicitudines nominata vituperari potitur
-                        quanta isti insipientiam ullus conquisitis geometriaque, concordia
-                        meminerimus amicos explicari admirer, nominata omnes dictas, ferre
-                        dicam gratissimo leguntur diligi licet, maximisque, reperire divitiarum,
-                        exercitationem probarem successerit miserum corrupisti stabilitas,
-                        solum nemore perspecta sit officiis cumanum pulcherrimum sentiamus,
-                        silano quasi, perfunctio aristotelem quanto, quanto cui aliquid quaerenda
-                        quibus benivole, turpius aegritudo magnosque paene explentur opera
-                        partitio scriptum. Concupiscunt eo quanti, cupiditates vellem ferrentur
-                        sentiant plusque pacuvii filium etsi, intellegimus cognitio opinor
-                        adhaesiones, valetudinis multo faciant caecilii nemini antiquitate,
-                        quidem fugiendum, impediri. Deseruisse vulgo laboramus oderit dolor
-                        declinare cura laudabilis, offendimur publicam, pugnare.</p>
-                    <p>Beata civitas malum iracundia scipio perspecta doleamus molestiae illa,
-                        expectata commodi pericula liberos iuberet sitne suas aspernari,
-                        numquidnam responsum cupiditatum romanum asperum. Umquam percipit
-                        contemnit utrumque conquisitis angere perspicuum loquuntur statu,
-                        vigiliae carum honestatis maximasque. Atomorum pariatur dolorem theophrasti
-                        sitne intuemur turbulentaeque captet postulet pleniorem, inanes error
-                        illi, adest dissidens putamus deserere voluptatis sit perspecta pluribus
-                        fortasse atomum, apertam adhuc vitiis parvos perturbatur dicunt facio
-                        mutat numeranda erimus, amorem iracundia mollitia transferre, habent
-                        paratus consequatur. Tenere iusteque imperitos cupiditatum omnium,
-                        aetatis erudito eorumque declinare probaturum turpius arare, inhumanus
-                        potiora pacto permagna, malo ego turpe, efficitur tranquilli albucius
-                        ipsarum praetereat nullam corrupisti suas re, frui percipiatur dein
-                        accusator arguerent alias. Eamque censet, paranda postulet utilitatibus
-                        nostros consistat divitias secutus iudico blanditiis asperiores,
-                        voluptatem valetudinis iustius consequentium maioribus, significet
-                        scribendi comparat primis declinare ista adversantur per ferre perpetiuntur,
-                        erigimur iucundius cognitionem, unum sublatum afranius, seditiones
-                        rationibus odio efficitur, leniat antiopam vocant voluptates exhorrescere,
-                        hic voluptaria sequitur graeca. Quale desistemus praesentium habemus,
-                        magis graviter nihil finibus commemorandis longinquitate, utamur,
-                        declinationem volumus omnia cognosci neglegit expedire nemini praesertim,
-                        geometrica faciendumve tradidisse depravatum, optime consul eveniet,
-                        utramque arare iucunditatem iniurias suscipiantur invidus derepta.
-                        Emancipaverat primo neglegit dicebas vivendum fugiamus. Est. Necessariae
-                        id investigandi, deditum alienum.</p>
-                    <p>Ingeniis stoicis finiri sequatur possum verissimum vel debemus statu
-                        exquirere. Omnibus, verterem ferae arbitrer maiora referatur mediocris
-                        praeter deseruisse, legendum detractio, consectetur disputandum harum.
-                        Aequo cernimus explicabo beatae afficit approbantibus lictores robustus
-                        numeranda accedit, apeirian cogitemus parvos adiuvet probatum voluptas
-                        saluto proficiscuntur intemperantes data, maiestatis fautrices assidua
-                        suaviter mihi. Iis claris quaestionem statim quarum pertinerent audire
-                        sedulitatem, referatur, suscipiet maximeque. Tale acutus intercapedo
-                        mandamus status nescius insolens audiebamus menandro contenta, fugiat
-                        pro, studio morati poetarum venustate supplicii melius lictores sequatur
-                        disputari, sapiente imperiis foedus putarent nec dubio lucifugi miraretur
-                        fastidium, nescius parabilis poetis num fictae homero praeterea tractatos
-                        graecis fortunam, ferrentur muniti atomi adiit sententia hac beata.
-                        Facultas dubitemus puerilis generis inflammati assentiar habeat.
-                        Studia discordant. Mors sibi propriae umquam magnam saxum celeritas,
-                        uti conquirendae videro delicata patre. Errore pertineant consequamur
-                        orestem videatur motum usque cyrenaicisque, aptius praesertim tuo
-                        istam existimare equos prospexit necesse intereant probatum, improborum,
-                        integre motu nostram anteponant paulo, itaque prompta partus albam
-                        turma propter litterae cetero, intemperantiam possumus, deterius,
-                        verentur adipisci doceat chaere quantaque accedunt, videri decore
-                        perfunctio, mel vide mediocritatem sentit, noster arare paulo homo
-                        malle provident, causas ullus d sequitur fames penitus ferantur veriusque
-                        alia tranquillitatem, aut dicenda reprehensa, collaudata talem. Motum
-                        partitio salutandi.</p>
-                    <p>Pedalis mediocris, magnosque vitiis dubio parte recusabo, invitat percurri
-                        liberalitati maerores fortitudinis legant multavit torquentur, inciderit
-                        quaerendi periculum alienum numquid amaret tranquillat modum suo
-                        futuros, disciplinis statuerunt debet erudito quae confirmare, meam
-                        consequentium voluptatum meminit victi splendore tenebimus definitiones
-                        firme iudicari. Amici affert tollit suscipiantur nullam derigatur
-                        vicinum, exedunt diu iudicium, aristotele impetu proposita facimus
-                        locis conclusum regione turbent segnitiae. Athenis perspexit fonte
-                        cum paene indicaverunt temperantiam, signiferumque amatoriis suscipiantur
-                        credo reddidisti perdiderunt incommoda poetarum suspicio incidant.
-                        Atomum, unde laetitia insolens laudatur, philosophi chaere. Sapientia
-                        expressas astris praeclare iudex ornatus expetendam adolescens plurimum,
-                        moveat nulla, nulla paranda mutae fidelissimae ibidem caelo ius metuque
-                        divinum paene, privatio putamus dicebas, dicant atque velit collegisti
-                        firmitatem ferantur sponte inani utrumvis, veritatis, magis coniunctione
-                        munere porro indocti scipio graeco quietae obligantur adoptionem,
-                        aptissimum quosque, opinemur scripserit rebus acutum ipsarum consentinis
-                        singulos declinare, iniurias mens verterem uberius debilitatem afferre
-                        captiosa perspicuum magna. Debeo ineruditus asperner iudicat, odio
-                        iustioribus alterum optimi cohaerescant metrodorus. Laboribus meis
-                        inquam caelo quoque videamus debilitatem metus gravis fugienda, quidem
-                        deseruisse intus dividendo suspicio, allevatio triarius transferrem
-                        continent debilitati delectat. Explentur inesse equidem invidus,
-                        erat ponunt eidola memoria turpe vicinum mererer animal artis occulta,
-                        pariuntur venustate doctissimos, consumere quaeque corrupte eisque
-                        officiis.</p>
-                    <p>Admodum recordamur ne unum, vitae, detractio poterit primum, genuit
-                        utilitate displicet hortensio nescius contemnit duo meis ad, declinabunt
-                        fructuosam que improborum zenonem placet saluti tam, legendis quietus
-                        tractatas tria, verissimum theseo summum que. Dividendo fictae patria
-                        totam nostris texit aliena pecunias. Degendae late disseretur, quoniam
-                        suavitate quo terentianus debent arridens. Fruuntur doloribus nimis
-                        mandaremus assentiar, tempore expectata. Genuit voluptaria artem
-                        graecis venustate, praesidium foedus facio aegritudines sentit suscipit
-                        torquatus gessisse ob. Concursio quanti agam vestrae. Consequentium
-                        assentior provident gravioribus, metuamus intellegerem, incurreret
-                        utilitate audita tollunt bene, perpetuis modi bonarum amicis chrysippe,
-                        tranquilli interesse liberamur viam chrysippo vituperari proposita
-                        manu, volumus virtutem temperantiamque philosophiae expetendum, aliquo
-                        multam suscipiet dolores vero exitum, mens ornateque directam, numeris
-                        pars torquem calere cupiditatibusque difficiles nulli laboriosam
-                        tueri praesenti, labore praesens percipit dices. Te legerint aequitate.
-                        Constringendos. Audaces cupiditates tranquilli vester seditione prohiberet
-                        putant non, dissident tolerabiles loqueretur fructuosam oratione,
-                        fatendum etiam, bonorum probarentur imperitorum dicantur, pueri ferre
-                        studiose, videor clarorum. Artifex regione conflixisse impetum graeci.
-                        Omne desideraturam expressas deterret inciderint, fungimur nosmet,
-                        iudico tantalo delectamur firmam contentam. Discordans arridens incurrunt
-                        singulos percurri animadversionis. Discenda patientia amarissimam
-                        audita hoc victi contemnere occultarum facilius expectata. Innumerabiles
-                        consequi utrum, molestiam phaedrum molestias quas. Expetendas confectum
-                        unde afferre audaces.</p>
-                </div>
+<div class="page-content">
+    <!-- Panel Table Tools -->
+    <div class="panel">
+      <header class="panel-heading">
+        <h3 class="panel-title"></h3>
+    </header>
+    <div class="panel-body">
+          
+
+                <table>
+                    <tr>
+                        <td>
+                            @if (Auth::user()->tieneRole('Super Administrador'))
+                            <a class="btn btn-primary" href="{{ route('materia_prima.create') }}">Agregar Materia Prima</a>
+                            @endif
+                            <a class="btn btn-light" href="{{ route('home') }}">Volver al Home</a>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+
+                <table class="table table-hover dataTable table-striped w-full" id="exampleTableTools">
+
+                    <thead>
+
+                        <tr>
+                            <th class="cell-300" scope="col">Codigo</th>
+                            <th class="cell-300" scope="col">Nombre</th>
+                            <th class="cell-300" scope="col">Cantidad</th>
+                            <th class="cell-300" scope="col">Costo</th>
+                            <th class="cell-300" scope="col">Unidad de Medida</th>
+                            <th class="cell-300" scope="col">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($materia_prima as $mp)
+                        <tr>
+                            <td>{{ $mp->id }}</td>
+                            <td>{{ $mp->nombre }}</td>
+                            <td>{{ $mp->cantidad }}</td>
+                            <td>{{ $mp->costo }}</td>
+                            <td>{{ $mp->unidadmedida }}</td>
+                            <td>
+                                @if (Auth::user()->tieneRole('Super Administrador'))
+                                <form method="get" action="{{ route('materia_prima.edit',['materia_prima'=>$mp->id]) }}">
+                                    <button type="submit" class="btn btn-info" name="editar">Editar</button>
+                                </form>
+                                <form method="post" action="{{ route('materia_prima.destroy',['materia_prima'=>$mp->id]) }}">
+                                    @csrf
+                                    {{ method_field('delete') }}
+                                    <button class="btn btn-danger" type="submit" onclick="return confirm('¿Desea eliminar esta materia prima?');">Eliminar</button>
+                                </form>
+                                @endif
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+
             </div>
         </div>
     </div>
+</div>
+                
     <!-- End Page -->
-
-
+    
     <!-- Footer -->
     <footer class="site-footer">
         <div class="site-footer-legal">© 2018 <a href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>
@@ -602,66 +511,3 @@
 
 </html>
 
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-
-                <table>
-                    <tr>
-                        <td>
-                            @if (Auth::user()->tieneRole('Super Administrador'))
-                            <a class="btn btn-success" href="{{ route('materia_prima.create') }}">Agregar Materia Prima</a>
-                            @endif
-                            <a class="btn btn-dark" href="{{ route('home') }}">Volver al Home</a>
-                        </td>
-                    </tr>
-                </table>
-                <br>
-
-                <table class="table table-light table-hover">
-
-                    <thead class="thead-light">
-
-                        <tr>
-                            <th>Codigo</th>
-                            <th>Nombre</th>
-                            <th>Cantidad</th>
-                            <th>Costo</th>
-                            <th>Unidad de Medida</th>
-                            <th>Opciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($materia_prima as $mp)
-                        <tr>
-                            <td>{{ $mp->id }}</td>
-                            <td>{{ $mp->nombre }}</td>
-                            <td>{{ $mp->cantidad }}</td>
-                            <td>{{ $mp->costo }}</td>
-                            <td>{{ $mp->unidadmedida }}</td>
-                            <td>
-                                @if (Auth::user()->tieneRole('Super Administrador'))
-                                <form method="get" action="{{ route('materia_prima.show',['materia_prima'=>$mp->id]) }}">
-                                    <input class="btn btn-primary" type="submit" value="ver">
-                                </form>
-                                <form method="get" action="{{ route('materia_prima.edit',['materia_prima'=>$mp->id]) }}">
-                                    <input class="btn btn-warning" type="submit" value="Editar">
-                                </form>
-                                <form method="post" action="{{ route('materia_prima.destroy',['materia_prima'=>$mp->id]) }}">
-                                    @csrf
-                                    {{ method_field('delete') }}
-                                    <input class="btn btn-danger" type="submit" onclick="return confirm('¿Desea eliminar esta materia prima?');" value="Eliminar">
-                                </form>
-                                @endif
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-
-            </div>
-        </div>
-    </div>
-</div>

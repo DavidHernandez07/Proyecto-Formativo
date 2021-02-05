@@ -62,8 +62,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Perfil
 Route::get('perfil', 'UserController@perfil');
-<<<<<<< HEAD
+
 Route::post('perfil', 'UserController@subir_perfil');
-=======
-Route::post('perfil', 'UserController@subir_perfil');
->>>>>>> 104ed4b6b01d0def60d88f373305951e58a4c92f

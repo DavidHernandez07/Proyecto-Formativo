@@ -344,43 +344,55 @@ role="tabpanel">
             </a>
         </li>
         <li class="site-menu-item">
-            <a class="animsition-link" href="{{route('panaderia.index')}}">
-                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                <span class="site-menu-title">Registro Panaderia</span>
-            </a>
-        </li>
-        @if (Auth::user()->tieneRole('Super Administrador'))
-        <li class="site-menu-item ">
-            <a class="animsition-link" href="{{route('role.index')}}">
-                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                <span class="site-menu-title">Gestion de Roles</span>
-            </a>
-        </li>
-        <li class="site-menu-item ">
-            <a class="animsition-link" href="{{route('user.index')}}">
-                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                <span class="site-menu-title">Gestion de Usuarios</span>
-            </a>
-        </li>
-        @endif
-        <li class="site-menu-item ">
-            <a class="animsition-link" href="{{route('materia_prima.index')}}">
-                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                <span class="site-menu-title">Materia Prima</span>
-            </a>
-        </li>
-        <li class="site-menu-item">
-            <a class="animsition-link" href="{{route('mano_de_obra.index')}}">
-                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                <span class="site-menu-title">Mano de Obra</span>
-            </a>
-        </li>
-        <li class="site-menu-item">
-            <a class="animsition-link" href="{{route('ficha_tecnica.index')}}">
-                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                <span class="site-menu-title">Ficha Tecnica</span>
-            </a>
-        </li>
+                <a class="animsition-link" href="{{route('panaderia.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Registro Panaderia</span>
+                    </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="{{route('user.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Gestion de Usuarios</span>
+                    </a>
+              </li>
+               @if (Auth::user()->tieneRole('Super Administrador'))
+              <li class="site-menu-item ">
+                <a class="animsition-link" href="{{route('role.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Gestion de Roles</span>
+                    </a>
+              </li>
+              <li class="site-menu-item ">
+                <a class="animsition-link" href="{{route('gestion_usuario.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Gestion de Empleados</span>
+                    </a>
+              </li>
+              @endif
+              <li class="site-menu-item ">
+                <a class="animsition-link" href="{{route('materia_prima.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Materia Prima</span>
+                    </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="{{route('mano_de_obra.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Mano de Obra</span>
+                    </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="{{route('cifs.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Gestión de Cifs</span>
+                    </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="{{route('ficha_tecnica.index')}}">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Ficha Tecnica</span>
+                    </a>
+              </li>
     </ul>
 </li>
 </ul>      </div>
@@ -405,7 +417,7 @@ role="tabpanel">
     <!-- Panel Table Tools -->
     <div class="panel">
       <header class="panel-heading">
-        <h3 class="panel-title">Table Tools</h3>
+        <h3 class="panel-title"></h3>
     </header>
     <div class="panel-body">
         <table class="table table-hover dataTable table-striped w-full" id="exampleTableTools">
