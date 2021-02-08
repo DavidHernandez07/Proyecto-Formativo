@@ -11,8 +11,8 @@
   <title>Olvidaste Contraseña | DaAnJu </title>
 
   
-  <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
-    <link rel="shortcut icon" href="../../img/logo.png">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+    <link rel="shortcut icon" href="../img/logo.png">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../../global/css/bootstrap.min.css">

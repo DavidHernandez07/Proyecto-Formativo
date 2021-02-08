@@ -18,13 +18,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/cambiarClave', function() {
-    return view('auth.passwords.reset');
-});
-//Route::get('/panaderia','PanaderiaController@index');
-//Route::get('/panaderia/create','PanaderiaController@create');
 
-Route::resource('panaderia','PanaderiaController')->middleware('auth');
 
 Route::middleware('auth')->resource('user', 'UserController');
 
@@ -34,6 +28,11 @@ Route::middleware('auth')->post('user/guardarRole', 'UserController@guardarRole'
 
 Route::middleware('auth')->resource('materia_prima', 'materia_primaController');
 Route::middleware('auth')->get('addmateria_prima/{materia_prima}','materia_primaController@addmateria_prima')->name('materia_prima.addmateria_prima');
+
+Route::middleware('auth')->resource('panaderia', 'PanaderiaController');
+Route::middleware('auth')->get('addpanaderia/{panaderia}','PanaderiaController@addpanaderia')->name('panaderia.addpanaderia');
+
+
 
 Route::middleware('auth')->resource('cifs', 'CifsController');
 Route::middleware('auth')->get('addcifs/{cifs}','CifsController@addcifs')->name('cifs.addcifs');

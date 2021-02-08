@@ -14,12 +14,12 @@ class CreatePanaderiasTable extends Migration
     public function up()
     {
         Schema::create('panaderias', function (Blueprint $table) {
+           
             $table->increments('id');
-
-            $table->string('NIT');
-            $table->string('Nombre');
-            $table->string('Telefono');
-            $table->string('Direccion');
+            $table->string('nit');
+            $table->string('nombre');
+            $table->string('telefono');
+            $table->string('direccion');
             $table->timestamps();
         });
     }

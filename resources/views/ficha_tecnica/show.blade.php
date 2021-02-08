@@ -10,27 +10,27 @@
 
     <title>Ficha Técnica | DaAnJu</title>
 
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="shortcut icon" href="img/Logo.png">
+    <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
+    <link rel="shortcut icon" href="../../img/Logo.png">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="global/css/bootstrap.min.css">
-    <link rel="stylesheet" href="global/css/bootstrap-extend.min.css">
-    <link rel="stylesheet" href="css/site.min.css">
+    <link rel="stylesheet" href="../../global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../global/css/bootstrap-extend.min.css">
+    <link rel="stylesheet" href="../../css/site.min.css">
 
     <!-- Plugins -->
-    <link rel="stylesheet" href="global/vendor/animsition/animsition.css">
-    <link rel="stylesheet" href="global/vendor/asscrollable/asScrollable.css">
-    <link rel="stylesheet" href="global/vendor/switchery/switchery.css">
-    <link rel="stylesheet" href="global/vendor/intro-js/introjs.css">
-    <link rel="stylesheet" href="global/vendor/slidepanel/slidePanel.css">
-    <link rel="stylesheet" href="global/vendor/flag-icon-css/flag-icon.css">
-    <link rel="stylesheet" href="global/vendor/waves/waves.css">
+    <link rel="stylesheet" href="../../global/vendor/animsition/animsition.css">
+    <link rel="stylesheet" href="../../global/vendor/asscrollable/asScrollable.css">
+    <link rel="stylesheet" href="../../global/vendor/switchery/switchery.css">
+    <link rel="stylesheet" href="../../global/vendor/intro-js/introjs.css">
+    <link rel="stylesheet" href="../../global/vendor/slidepanel/slidePanel.css">
+    <link rel="stylesheet" href="../../global/vendor/flag-icon-css/flag-icon.css">
+    <link rel="stylesheet" href="../../global/vendor/waves/waves.css">
 
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="global/fonts/material-design/material-design.min.css">
-    <link rel="stylesheet" href="global/fonts/brand-icons/brand-icons.min.css">
+    <link rel="stylesheet" href="../global/fonts/material-design/material-design.min.css">
+    <link rel="stylesheet" href="../global/fonts/brand-icons/brand-icons.min.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
 
     <!--[if lt IE 9]>
@@ -43,7 +43,7 @@
     <![endif]-->
 
     <!-- Scripts -->
-    <script src="global/vendor/breakpoints/breakpoints.js"></script>
+    <script src="../../global/vendor/breakpoints/breakpoints.js"></script>
     <script>
         Breakpoints();
     </script>
@@ -263,8 +263,8 @@
                 <!-- End Navbar Toolbar Right -->
                 <div class="navbar-brand navbar-brand-center">
                     <a href="{{url('/home')}}">
-                        <img class="navbar-brand-logo navbar-brand-logo-normal" src="img/logo2.png" title="DaAnJu Cost System">
-                        <img class="navbar-brand-logo navbar-brand-logo-special" src="img/logo2.png" title="DaAnJu Cost System">
+                        <img class="navbar-brand-logo navbar-brand-logo-normal" src="../../img/logo2.png" title="DaAnJu Cost System">
+                        <img class="navbar-brand-logo navbar-brand-logo-special" src="../../img/logo2.png" title="DaAnJu Cost System">
                     </a>
                 </div>
             </div>
@@ -424,10 +424,10 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{{ $f->id }}</td>
-                                <td>{{ $f->Num_Unidades }}</td>
-                                <td>{{ $f->tiempo }}</td>
-                                <td>{{ $f->descripcion }}</td>
+                                <td>{{ $ficha_tecnica->id }}</td>
+                                <td>{{ $ficha_tecnica->Num_Unidades }}</td>
+                                <td>{{ $ficha_tecnica->tiempo }}</td>
+                                <td>{{ $ficha_tecnica->descripcion }}</td>
                                 </td>
                             </tr>
                         </tbody>
@@ -525,45 +525,45 @@
         </div>
     </footer>
     <!-- Core  -->
-    <script src="global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
-    <script src="global/vendor/jquery/jquery.js"></script>
-    <script src="global/vendor/popper-js/umd/popper.min.js"></script>
-    <script src="global/vendor/bootstrap/bootstrap.js"></script>
-    <script src="global/vendor/animsition/animsition.js"></script>
-    <script src="global/vendor/mousewheel/jquery.mousewheel.js"></script>
-    <script src="global/vendor/asscrollbar/jquery-asScrollbar.js"></script>
-    <script src="global/vendor/asscrollable/jquery-asScrollable.js"></script>
-    <script src="global/vendor/waves/waves.js"></script>
+    <script src="../../global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+    <script src="../../global/vendor/jquery/jquery.js"></script>
+    <script src="../../global/vendor/popper-js/umd/popper.min.js"></script>
+    <script src="../../global/vendor/bootstrap/bootstrap.js"></script>
+    <script src="../../global/vendor/animsition/animsition.js"></script>
+    <script src="../../global/vendor/mousewheel/jquery.mousewheel.js"></script>
+    <script src="../../global/vendor/asscrollbar/jquery-asScrollbar.js"></script>
+    <script src="../../global/vendor/asscrollable/jquery-asScrollable.js"></script>
+    <script src="../../global/vendor/waves/waves.js"></script>
 
     <!-- Plugins -->
-    <script src="global/vendor/switchery/switchery.js"></script>
-    <script src="global/vendor/intro-js/intro.js"></script>
-    <script src="global/vendor/screenfull/screenfull.js"></script>
-    <script src="global/vendor/slidepanel/jquery-slidePanel.js"></script>
+    <script src="../../global/vendor/switchery/switchery.js"></script>
+    <script src="../../global/vendor/intro-js/intro.js"></script>
+    <script src="../../global/vendor/screenfull/screenfull.js"></script>
+    <script src="../../global/vendor/slidepanel/jquery-slidePanel.js"></script>
 
     <!-- Scripts -->
-    <script src="global/js/Component.js"></script>
-    <script src="global/js/Plugin.js"></script>
-    <script src="global/js/Base.js"></script>
-    <script src="global/js/Config.js"></script>
+    <script src="../../global/js/Component.js"></script>
+    <script src="../../global/js/Plugin.js"></script>
+    <script src="../../global/js/Base.js"></script>
+    <script src="../../global/js/Config.js"></script>
 
-    <script src="js/Section/Menubar.js"></script>
-    <script src="js/Section/Sidebar.js"></script>
-    <script src="js/Section/PageAside.js"></script>
-    <script src="js/Plugin/menu.js"></script>
+    <script src="../../js/Section/Menubar.js"></script>
+    <script src="../../js/Section/Sidebar.js"></script>
+    <script src="../../js/Section/PageAside.js"></script>
+    <script src="../../js/Plugin/menu.js"></script>
 
     <!-- Config -->
-    <script src="global/js/config/colors.js"></script>
-    <script src="js/config/tour.js"></script>
+    <script src="../../global/js/config/colors.js"></script>
+    <script src="../../js/config/tour.js"></script>
     <script>
         Config.set('assets', '../../assets');
     </script>
 
     <!-- Page -->
-    <script src="js/Site.js"></script>
-    <script src="global/js/Plugin/asscrollable.js"></script>
-    <script src="global/js/Plugin/slidepanel.js"></script>
-    <script src="global/js/Plugin/switchery.js"></script>
+    <script src="../../js/Site.js"></script>
+    <script src="../../global/js/Plugin/asscrollable.js"></script>
+    <script src="../../global/js/Plugin/slidepanel.js"></script>
+    <script src="../../global/js/Plugin/switchery.js"></script>
 
     <script>
         (function(document, window, $) {

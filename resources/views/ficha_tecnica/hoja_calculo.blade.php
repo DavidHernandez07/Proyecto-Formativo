@@ -1,6 +1,3 @@
-@extends('adminlte::page')
-
-@section('content')
 
 <div class="container">
     <div class="row justify-content-center">
@@ -8,27 +5,36 @@
             <div class="card">
 
                 <h1>Ficha Tecnica</h1>
-                <table class="table table-light table-hover">
-                    <thead class="thead-light">
-                        <tr>
-                            <th>Codigo</th>
-                            <th>Capacidad de Producción</th>
-                            <th>Tiempo Promedio de Fabricación</th>
-                            <th>Descripción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{{ $ficha_tecnica->id }}</td>
-                            <td>{{ $ficha_tecnica->Num_Unidades}}</td>
-                            <td>{{ $ficha_tecnica->tiempo }}</td>
-                            <td>{{ $ficha_tecnica->descripcion }}
-                            </td>
-                        </tr>
-                    </tbody>
+                <table class="table table-hover table full-color-table full-inverse-table hover-table">
+                    <thead>
+                            <tr scope="col">
+                                <td>Id</td>
+                                <td>
+                                    {{ $ficha_tecnica->id }}
+                                </td>
+                            </tr>
+                            <tr scope="col">
+                                <td>Capacidad de Producción</td>
+                                <td>
+                                    {{ $ficha_tecnica->Num_Unidades }}
+                                </td>
+                            </tr>
+                            <tr scope="col">
+                                <td>Tiempo Promedio de Fabricación</td>
+                                <td>
+                                    {{ $ficha_tecnica->tiempo }}
+                                </td>
+                            </tr>
+                            <tr scope="col">
+                                <td>Descripción</td>
+                                <td>
+                                    {{ $ficha_tecnica->descripcion }}
+                                </td>
+                            </tr>
+                        </thead>
                 </table>
                 <br>
-                
+
                 <table class="table table-light table-hover">
                     <thead class="thead-light">
                         <tr>
@@ -36,16 +42,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                  @php ($suma=0)
+                        @php ($suma=0)
                         @foreach($ficha_tecnica->materias_primas as $mp)
                         @php ($suma=$suma+$mp->costo*$mp->pivot->cantidad)
                         @endforeach
                         <tr>
-                        <td>{{$suma}}</td>
+                            <td>{{$suma}}</td>
                         </tr>
-                </tbody>
+                    </tbody>
                 </table>
-               
+
                 <table class="table table-light table-hover">
                     <thead class="thead-light">
                         <tr>
@@ -53,15 +59,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                @php ($suma1=0)
+                        @php ($suma1=0)
                         @foreach($ficha_tecnica->mano_obras as $mo)
                         @php ($suma1=$suma1+$mo->costo*$mo->pivot->cantidad_tiempo)
                         @endforeach
                         <tr>
-                        <td>{{$suma1}}</td>
+                            <td>{{$suma1}}</td>
                         </tr>
-                        
-                </tbody>
+
+                    </tbody>
                 </table>
 
                 <table class="table table-light table-hover">
@@ -71,17 +77,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                @php ($suma2=($ficha_tecnica->cifs()/$ficha_tecnica->Num_Unidades))
-                        
+                        @php ($suma2=($ficha_tecnica->cifs()/$ficha_tecnica->Num_Unidades))
+
                         <tr>
-                        <td>{{$suma2}}</td>
+                            <td>{{$suma2}}</td>
                         </tr>
-                        
-                </tbody>
+
+                    </tbody>
                 </table>
 
-                
-               
+
+
                 <table class="table table-light table-hover">
                     <thead class="thead-light">
                         <tr>
@@ -90,14 +96,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                        <td>{{$suma+$suma1+$suma2}}</td>
+                            <td>{{$suma+$suma1+$suma2}}</td>
                         </tr>
-                </tbody>
+                    </tbody>
                 </table>
-                
-                
 
 
-            
-                
-            @endsection
+
+
+
+
+                @endsection

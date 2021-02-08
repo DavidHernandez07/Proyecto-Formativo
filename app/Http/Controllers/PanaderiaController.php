@@ -15,8 +15,8 @@ class PanaderiaController extends Controller
     public function index()
     {
         //
-        $datos['panaderia']=panaderia::paginate(5);
-        return view('panaderia.index',$datos);
+        $panaderia = panaderia::all();
+        return view('panaderia.index',["panaderia"=>$panaderia]);
     }
 
     /**
@@ -38,41 +38,27 @@ class PanaderiaController extends Controller
      */
     public function store(Request $request)
     {
-        //
-       // $datospanaderia=request()->all();
-
-        $datospanaderia=request()->except('_token');
-
-        panaderia::insert($datospanaderia);
-
-        //return response()->json($datospanaderia);
-        return redirect('panaderia')->with('Mensaje','Infomacion agregada con éxito');
+        $panaderia= new panaderia();
+        $panaderia->id=$request->id;
+        $panaderia->nit=$request->nit;
+        $panaderia->nombre=$request->nombre;
+        $panaderia->telefono=$request->telefono;
+        $panaderia->direccion=$request->direccion;
+        $panaderia->save();
+        return redirect()->route('panaderia.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\panaderia  $panaderia
-     * @return \Illuminate\Http\Response
-     */
+   
     public function show()
     {
         //
-       ;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\panaderia  $panaderia
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         //
-        $panaderia= panaderia::findOrFail($id);
-
-        return view('panaderia.edit',compact('panaderia'));
+        $panaderia = panaderia::find($id);
+        return view('panaderia.edit',['panaderia'=>$panaderia]);
 
     }
 
@@ -86,13 +72,14 @@ class PanaderiaController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $datospanaderia=request()->except(['_token','_method']);
-        panaderia::where('id','=',$id)->update($datospanaderia);
-
-        //$panaderia= panaderia::findOrFail($id);
-        //return view('panaderia.edit',compact('panaderia'));
-
-        return redirect('panaderia')->with('Mensaje','Informacion modificada con éxito');
+    $panaderia = panaderia::find($id);
+    $panaderia->id=$request->id;
+    $panaderia->nit=$request->nit;
+    $panaderia->nombre=$request->nombre;
+    $panaderia->telefono=$request->telefono;
+    $panaderia->direccion=$request->direccion;
+    $panaderia->save();
+        return redirect()->route('panaderia.index');
     }
 
     /**
@@ -104,9 +91,9 @@ class PanaderiaController extends Controller
     public function destroy($id)
     {
         //
-        panaderia::destroy($id);
-
-        return redirect('panaderia')->with('Mensaje','Informacion eliminada con éxito');
+        $panaderia = panaderia::find($id);
+        $panaderia->delete();
+        return redirect()->route('panaderia.index');
     }
 }
 
