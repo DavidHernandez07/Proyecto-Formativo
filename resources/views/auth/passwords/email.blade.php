@@ -65,7 +65,8 @@
             <div align="center">
               <h2 style="color: #FFFFFF;">Olvidaste Tu Contraseña ?</h2>
               <p>Ingrese su correo electrónico registrado para restablecer su contraseña </p>
-            <form method="post" role="form" autocomplete="off">
+             <form method="POST" action="{{ route('password.email') }}">
+            @csrf
         <div class="form-group form-material floating" data-plugin="formMaterial">
           <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
             value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
