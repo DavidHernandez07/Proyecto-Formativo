@@ -288,7 +288,7 @@
     <div class="site-menubar">
         <div class="site-menubar-header">
             <div class="cover overlay">
-                <img class="cover-image" src="examples/images/dashboard-header.jpg" alt="...">
+                <img class="cover-image" src="../examples/images/dashboard-header.jpg" alt="...">
                 <div class="overlay-panel vertical-align overlay-background">
                     <div class="vertical-align-middle">
                         <a class="avatar avatar-lg" href="javascript:void(0)">
@@ -327,12 +327,7 @@
                             </a>
                         </li>
                         @if (Auth::user()->tieneRole('Super Administrador'))
-                        <li class="site-menu-item ">
-                            <a class="animsition-link" href="{{route('role.index')}}">
-                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                                <span class="site-menu-title">Gestion de Roles</span>
-                            </a>
-                        </li>
+                        
                         <li class="site-menu-item ">
                             <a class="animsition-link" href="{{route('gestion_usuario.index')}}">
                                 <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>

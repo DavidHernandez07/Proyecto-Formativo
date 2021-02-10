@@ -415,29 +415,37 @@
 
                         <thead>
 
-                            <tr>
-                                <th class="cell-300" scope="col">Codigo</th>
-                                <th class="cell-300" scope="col">Capacidad de Producción</th>
-                                <th class="cell-300" scope="col">Tiempo Promedio de Fabricación</th>
-                                <th class="cell-300" scope="col">Descripción</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>{{ $ficha_tecnica->id }}</td>
-                                <td>{{ $ficha_tecnica->Num_Unidades }}</td>
-                                <td>{{ $ficha_tecnica->tiempo }}</td>
-                                <td>{{ $ficha_tecnica->descripcion }}</td>
+                        <tr scope="col">
+                                <td>Id</td>
+                                <td>
+                                    {{ $ficha_tecnica->id }}
                                 </td>
                             </tr>
-                        </tbody>
+                            <tr scope="col">
+                                <td>Capacidad de Producción</td>
+                                <td>
+                                    {{ $ficha_tecnica->Num_Unidades }}
+                                </td>
+                            </tr>
+                            <tr scope="col">
+                                <td>Tiempo Promedio de Fabricación</td>
+                                <td>
+                                    {{ $ficha_tecnica->tiempo }}
+                                </td>
+                            </tr>
+                            <tr scope="col">
+                                <td>Descripción</td>
+                                <td>
+                                    {{ $ficha_tecnica->descripcion }}
+                                </td>
+                            </tr>
+                        </thead>
                     </table>
                     <br>
-                    <h1>Lista de Materia prima de la ficha</h1>
                     <table class="table table-hover dataTable table-striped w-full" id="exampleTableTools">
-
+   
+                    <h2>Lista de Materia prima de la ficha</h2>
                         <thead>
-
                             <tr>
                                 <th class="cell-300" scope="col">Id</th>
                                 <th class="cell-300" scope="col">Nombre</th>
@@ -474,9 +482,8 @@
                         <br>
                     </table>
                     <br><br><br>
-                    <h1>Lista de Mano de Obra de la ficha</h1>
-                    <table class="table table-hover dataTable table-striped w-full" id="exampleTableTools">
-
+                    <table class="table table-hover dataTable table-striped w-full" id="exampleTableTools">    
+                    <h2>Lista de Mano de Obra de la ficha</h2>
                         <thead>
 
                             <tr>
