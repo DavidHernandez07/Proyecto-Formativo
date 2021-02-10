@@ -16,7 +16,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="global/css/bootstrap.min.css">
   <link rel="stylesheet" href="global/css/bootstrap-extend.min.css">
-  <link rel="stylesheet" href="../../css/site.min.css">
+  <link rel="stylesheet" href="css/site.min.css">
 
   <!-- Plugins -->
   <link rel="stylesheet" href="global/vendor/animsition/animsition.css">

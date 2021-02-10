@@ -15,24 +15,24 @@
     <link rel="shortcut icon" href="../img/logo.png">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../../global/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../global/css/bootstrap-extend.min.css">
-    <link rel="stylesheet" href="../../css/site.min.css">
+    <link rel="stylesheet" href="../global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../global/css/bootstrap-extend.min.css">
+    <link rel="stylesheet" href="../css/site.min.css">
 
     <!-- Plugins -->
-    <link rel="stylesheet" href="../../global/vendor/animsition/animsition.css">
-    <link rel="stylesheet" href="../../global/vendor/asscrollable/asScrollable.css">
-    <link rel="stylesheet" href="../../global/vendor/switchery/switchery.css">
-    <link rel="stylesheet" href="../../global/vendor/intro-js/introjs.css">
-    <link rel="stylesheet" href="../../global/vendor/slidepanel/slidePanel.css">
-    <link rel="stylesheet" href="../../global/vendor/flag-icon-css/flag-icon.css">
-    <link rel="stylesheet" href="../../global/vendor/waves/waves.css">
-    <link rel="stylesheet" href="../../examples/css/pages/login.css">
+    <link rel="stylesheet" href="../global/vendor/animsition/animsition.css">
+    <link rel="stylesheet" href="../global/vendor/asscrollable/asScrollable.css">
+    <link rel="stylesheet" href="../global/vendor/switchery/switchery.css">
+    <link rel="stylesheet" href="../global/vendor/intro-js/introjs.css">
+    <link rel="stylesheet" href="../global/vendor/slidepanel/slidePanel.css">
+    <link rel="stylesheet" href="../global/vendor/flag-icon-css/flag-icon.css">
+    <link rel="stylesheet" href="../global/vendor/waves/waves.css">
+    <link rel="stylesheet" href="../examples/css/pages/login.css">
 
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="../../global/fonts/material-design/material-design.min.css">
-    <link rel="stylesheet" href="../../global/fonts/brand-icons/brand-icons.min.css">
+    <link rel="stylesheet" href="../global/fonts/material-design/material-design.min.css">
+    <link rel="stylesheet" href="../global/fonts/brand-icons/brand-icons.min.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
 
   <!--[if lt IE 9]>
@@ -45,7 +45,7 @@
     <![endif]-->
 
   <!-- Scripts -->
-  <script src="../../global/vendor/breakpoints/breakpoints.js"></script>
+  <script src="../global/vendor/breakpoints/breakpoints.js"></script>
   <script>
     Breakpoints();
   </script>

@@ -1,4 +1,4 @@
-@extends('adminlte::auth.passwords.confirm')
+
 
 @section('content')
 <div class="container">
