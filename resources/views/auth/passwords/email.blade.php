@@ -78,7 +78,7 @@
           <label class="floating-label" for="inputEmail">Tu correo electrónico</label>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block">Restablecer Su Contraseña</button>
+          <button type="submit" onclick="return confirm('Hemos enviado su enlace de restablecimiento de contraseña por correo electrónico');" class="btn btn-primary btn-block">Restablecer Su Contraseña</button>
         </div>
       </form>
     

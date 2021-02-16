@@ -62,7 +62,7 @@
       <div class="brand">
         <img class="brand-img" src="img/logo.png" alt="...">
       </div>
-      <p>Registrate bebe</p>
+      <p>Registrate en DaAnJu</p>
       <form method="post" action="{{route('register')}}" autocomplete="off">
 
         <div class="form-group form-material floating" data-plugin="formMaterial">
