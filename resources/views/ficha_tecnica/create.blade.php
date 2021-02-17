@@ -86,18 +86,18 @@
                                 <span class="hamburger-bar"></span>
                             </i>
                         </a>
-                        </div>
-                    </li>
-                </ul>
-                <!-- End Navbar Toolbar -->
+            </div>
+            </li>
+            </ul>
+            <!-- End Navbar Toolbar -->
 
-                <!-- Navbar Toolbar Right -->
-                <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" data-animation="scale-up" aria-expanded="false" role="button">
-                            <span class="flag-icon flag-icon-co"></span>
-                        </a>
-                        <!--
+            <!-- Navbar Toolbar Right -->
+            <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" data-animation="scale-up" aria-expanded="false" role="button">
+                        <span class="flag-icon flag-icon-co"></span>
+                    </a>
+                    <!--
                         <div class="dropdown-menu" role="menu">
                             <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
                                 <span class="flag-icon flag-icon-gb"></span> English</a>
@@ -111,48 +111,48 @@
                                 <span class="flag-icon flag-icon-nl"></span> Dutch</a>
                         </div>
                        -->
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
-                            <span class="avatar avatar-online">
-                                <img src="/imagenes/{{ Auth::user()->avatar }}" alt="...">
-                                <i></i>
-                            </span>
-                        </a>
-                        <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" href="{{url('/perfil')}}" role="menuitem"><i class="icon md-account" aria-hidden="true"></i> Perfil</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="javascript:void(0)" role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault();
-                     document.getElementById('logout-form').submit();"><i class="icon md-power" aria-hidden="true"></i>Cerrar Sesión</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form></a>
-                        </div>
-                    </li>
-                </ul>
-                <!-- End Navbar Toolbar Right -->
-                <div class="navbar-brand navbar-brand-center">
-                    <a href="{{url('/home')}}">
-                        <img class="navbar-brand-logo navbar-brand-logo-normal" src="../img/logo2.png" title="DaAnJu Cost System">
-                        <img class="navbar-brand-logo navbar-brand-logo-special" src="../img/logo2.png" title="DaAnJu Cost System">
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
+                        <span class="avatar avatar-online">
+                            <img src="/imagenes/{{ Auth::user()->avatar }}" alt="...">
+                            <i></i>
+                        </span>
                     </a>
-                </div>
-            </div>
-            <!-- End Navbar Collapse -->
-
-            <!-- Site Navbar Seach -->
-            <div class="collapse navbar-search-overlap" id="site-navbar-search">
-                <form role="search">
-                    <div class="form-group">
-                        <div class="input-search">
-                            <i class="input-search-icon md-search" aria-hidden="true"></i>
-                            <input type="text" class="form-control" name="site-search" placeholder="Search...">
-                            <button type="button" class="input-search-close icon md-close" data-target="#site-navbar-search" data-toggle="collapse" aria-label="Close"></button>
-                        </div>
+                    <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" href="{{url('/perfil')}}" role="menuitem"><i class="icon md-account" aria-hidden="true"></i> Perfil</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="javascript:void(0)" role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();"><i class="icon md-power" aria-hidden="true"></i>Cerrar Sesión</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form></a>
                     </div>
-                </form>
+                </li>
+            </ul>
+            <!-- End Navbar Toolbar Right -->
+            <div class="navbar-brand navbar-brand-center">
+                <a href="{{url('/home')}}">
+                    <img class="navbar-brand-logo navbar-brand-logo-normal" src="../img/logo2.png" title="DaAnJu Cost System">
+                    <img class="navbar-brand-logo navbar-brand-logo-special" src="../img/logo2.png" title="DaAnJu Cost System">
+                </a>
             </div>
-            <!-- End Site Navbar Seach -->
+        </div>
+        <!-- End Navbar Collapse -->
+
+        <!-- Site Navbar Seach -->
+        <div class="collapse navbar-search-overlap" id="site-navbar-search">
+            <form role="search">
+                <div class="form-group">
+                    <div class="input-search">
+                        <i class="input-search-icon md-search" aria-hidden="true"></i>
+                        <input type="text" class="form-control" name="site-search" placeholder="Search...">
+                        <button type="button" class="input-search-close icon md-close" data-target="#site-navbar-search" data-toggle="collapse" aria-label="Close"></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- End Site Navbar Seach -->
         </div>
     </nav>
     <div class="site-menubar">
@@ -197,7 +197,7 @@
                             </a>
                         </li>
                         @if (Auth::user()->tieneRole('Super Administrador'))
-                        
+
                         <li class="site-menu-item ">
                             <a class="animsition-link" href="{{route('gestion_usuario.index')}}">
                                 <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
@@ -227,6 +227,12 @@
                             <a class="animsition-link" href="{{route('ficha_tecnica.index')}}">
                                 <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
                                 <span class="site-menu-title">Ficha Tecnica</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item">
+                            <a class="animsition-link" href="{{route('acercade.index')}}">
+                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                                <span class="site-menu-title">Sobre Nosotros</span>
                             </a>
                         </li>
                     </ul>

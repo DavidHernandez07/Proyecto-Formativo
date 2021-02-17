@@ -95,11 +95,12 @@
 
                 <!-- Navbar Toolbar Right -->
                 <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
-                    <li class="nav-item dropdown">
+                   <!--
+                         <li class="nav-item dropdown">
                         <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" data-animation="scale-up" aria-expanded="false" role="button">
                             <span class="flag-icon flag-icon-co"></span>
                         </a>
-                        <!--
+                       
                         <div class="dropdown-menu" role="menu">
                             <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
                                 <span class="flag-icon flag-icon-gb"></span> English</a>
@@ -112,8 +113,9 @@
                             <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
                                 <span class="flag-icon flag-icon-nl"></span> Dutch</a>
                         </div>
--->
+
                     </li>
+                    -->
                     <li class="nav-item dropdown">
                         <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
                             <span class="avatar avatar-online">
@@ -231,6 +233,12 @@
                                 <span class="site-menu-title">Ficha Tecnica</span>
                             </a>
                         </li>
+                        <li class="site-menu-item">
+              <a class="animsition-link" href="{{route('acercade.index')}}">
+                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                <span class="site-menu-title">Sobre Nosotros</span>
+              </a>
+            </li>
                     </ul>
                     </li>
                     </ul>

@@ -229,6 +229,12 @@
                                 <span class="site-menu-title">Ficha Tecnica</span>
                             </a>
                         </li>
+                        <li class="site-menu-item">
+                            <a class="animsition-link" href="{{route('acercade.index')}}">
+                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                                <span class="site-menu-title">Sobre Nosotros</span>
+                            </a>
+                        </li>
                     </ul>
                     </li>
                     </ul>

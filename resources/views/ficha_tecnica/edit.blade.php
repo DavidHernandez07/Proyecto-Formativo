@@ -87,18 +87,18 @@
                             </i>
                         </a>
                     </li>
-                        </div>
-                    </li>
-                </ul>
-                <!-- End Navbar Toolbar -->
+            </div>
+            </li>
+            </ul>
+            <!-- End Navbar Toolbar -->
 
-                <!-- Navbar Toolbar Right -->
-                <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" data-animation="scale-up" aria-expanded="false" role="button">
-                            <span class="flag-icon flag-icon-co"></span>
-                        </a>
-                        <!--
+            <!-- Navbar Toolbar Right -->
+            <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" data-animation="scale-up" aria-expanded="false" role="button">
+                        <span class="flag-icon flag-icon-co"></span>
+                    </a>
+                    <!--
                         <div class="dropdown-menu" role="menu">
                             <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
                                 <span class="flag-icon flag-icon-gb"></span> English</a>
@@ -112,48 +112,48 @@
                                 <span class="flag-icon flag-icon-nl"></span> Dutch</a>
                         </div>
 -->
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
-                            <span class="avatar avatar-online">
-                                <img src="/imagenes/{{ Auth::user()->avatar }}" alt="...">
-                                <i></i>
-                            </span>
-                        </a>
-                        <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" href="{{url('/perfil')}}" role="menuitem"><i class="icon md-account" aria-hidden="true"></i> Perfil </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="javascript:void(0)" role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault();
-                     document.getElementById('logout-form').submit();"><i class="icon md-power" aria-hidden="true"></i>Cerrar Sesión</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form></a>
-                        </div>
-                    </li>
-                </ul>
-                <!-- End Navbar Toolbar Right -->
-                <div class="navbar-brand navbar-brand-center">
-                    <a href="{{url('/home')}}">
-                        <img class="navbar-brand-logo navbar-brand-logo-normal" src="../../img/logo2.png" title="DaAnJu Cost System">
-                        <img class="navbar-brand-logo navbar-brand-logo-special" src="../../img/logo2.png" title="DaAnJu Cost System">
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
+                        <span class="avatar avatar-online">
+                            <img src="/imagenes/{{ Auth::user()->avatar }}" alt="...">
+                            <i></i>
+                        </span>
                     </a>
-                </div>
-            </div>
-            <!-- End Navbar Collapse -->
-
-            <!-- Site Navbar Seach -->
-            <div class="collapse navbar-search-overlap" id="site-navbar-search">
-                <form role="search">
-                    <div class="form-group">
-                        <div class="input-search">
-                            <i class="input-search-icon md-search" aria-hidden="true"></i>
-                            <input type="text" class="form-control" name="site-search" placeholder="Search...">
-                            <button type="button" class="input-search-close icon md-close" data-target="#site-navbar-search" data-toggle="collapse" aria-label="Close"></button>
-                        </div>
+                    <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" href="{{url('/perfil')}}" role="menuitem"><i class="icon md-account" aria-hidden="true"></i> Perfil </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="javascript:void(0)" role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();"><i class="icon md-power" aria-hidden="true"></i>Cerrar Sesión</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form></a>
                     </div>
-                </form>
+                </li>
+            </ul>
+            <!-- End Navbar Toolbar Right -->
+            <div class="navbar-brand navbar-brand-center">
+                <a href="{{url('/home')}}">
+                    <img class="navbar-brand-logo navbar-brand-logo-normal" src="../../img/logo2.png" title="DaAnJu Cost System">
+                    <img class="navbar-brand-logo navbar-brand-logo-special" src="../../img/logo2.png" title="DaAnJu Cost System">
+                </a>
             </div>
-            <!-- End Site Navbar Seach -->
+        </div>
+        <!-- End Navbar Collapse -->
+
+        <!-- Site Navbar Seach -->
+        <div class="collapse navbar-search-overlap" id="site-navbar-search">
+            <form role="search">
+                <div class="form-group">
+                    <div class="input-search">
+                        <i class="input-search-icon md-search" aria-hidden="true"></i>
+                        <input type="text" class="form-control" name="site-search" placeholder="Search...">
+                        <button type="button" class="input-search-close icon md-close" data-target="#site-navbar-search" data-toggle="collapse" aria-label="Close"></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- End Site Navbar Seach -->
         </div>
     </nav>
     <div class="site-menubar">
@@ -186,50 +186,56 @@
                             </a>
                         </li>
                         <li class="site-menu-item">
-                <a class="animsition-link" href="{{route('panaderia.index')}}">
-                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                        <span class="site-menu-title">Registro Panaderia</span>
-                    </a>
-              </li>
-              <li class="site-menu-item">
-                <a class="animsition-link" href="{{route('user.index')}}">
-                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                        <span class="site-menu-title">Gestion de Usuarios</span>
-                    </a>
-              </li>
-               @if (Auth::user()->tieneRole('Super Administrador'))
-              
-              <li class="site-menu-item ">
-                <a class="animsition-link" href="{{route('gestion_usuario.index')}}">
-                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                        <span class="site-menu-title">Gestion de Empleados</span>
-                    </a>
-              </li>
-              @endif
-              <li class="site-menu-item ">
-                <a class="animsition-link" href="{{route('materia_prima.index')}}">
-                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                        <span class="site-menu-title">Materia Prima</span>
-                    </a>
-              </li>
-              <li class="site-menu-item">
-                <a class="animsition-link" href="{{route('mano_de_obra.index')}}">
-                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                        <span class="site-menu-title">Mano de Obra</span>
-                    </a>
-              </li>
-              <li class="site-menu-item">
-                <a class="animsition-link" href="{{route('cifs.index')}}">
-                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                        <span class="site-menu-title">Gestión de Cifs</span>
-                    </a>
-              </li>
-              <li class="site-menu-item">
-                <a class="animsition-link" href="{{route('ficha_tecnica.index')}}">
-                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                        <span class="site-menu-title">Ficha Tecnica</span>
-                    </a>
-              </li>
+                            <a class="animsition-link" href="{{route('panaderia.index')}}">
+                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                                <span class="site-menu-title">Registro Panaderia</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item">
+                            <a class="animsition-link" href="{{route('user.index')}}">
+                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                                <span class="site-menu-title">Gestion de Usuarios</span>
+                            </a>
+                        </li>
+                        @if (Auth::user()->tieneRole('Super Administrador'))
+
+                        <li class="site-menu-item ">
+                            <a class="animsition-link" href="{{route('gestion_usuario.index')}}">
+                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                                <span class="site-menu-title">Gestion de Empleados</span>
+                            </a>
+                        </li>
+                        @endif
+                        <li class="site-menu-item ">
+                            <a class="animsition-link" href="{{route('materia_prima.index')}}">
+                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                                <span class="site-menu-title">Materia Prima</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item">
+                            <a class="animsition-link" href="{{route('mano_de_obra.index')}}">
+                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                                <span class="site-menu-title">Mano de Obra</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item">
+                            <a class="animsition-link" href="{{route('cifs.index')}}">
+                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                                <span class="site-menu-title">Gestión de Cifs</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item">
+                            <a class="animsition-link" href="{{route('ficha_tecnica.index')}}">
+                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                                <span class="site-menu-title">Ficha Tecnica</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item">
+                            <a class="animsition-link" href="{{route('acercade.index')}}">
+                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                                <span class="site-menu-title">Sobre Nosotros</span>
+                            </a>
+                        </li>
                     </ul>
                     </li>
                     </ul>
@@ -241,14 +247,14 @@
 
     <!-- Page -->
     <div class="page">
-  <div class="page-header">
-    <h1 class="page-title">Sección para Editar Ficha Técnica en DaAnJu</h1>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a>Inicio</a></li>
-      <li class="breadcrumb-item"><a>Gestion de Ficha Técnica</a></li>
-      <li class="breadcrumb-item"><a>Editar</a></li>
-  </ol>
-</div>
+        <div class="page-header">
+            <h1 class="page-title">Sección para Editar Ficha Técnica en DaAnJu</h1>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a>Inicio</a></li>
+                <li class="breadcrumb-item"><a>Gestion de Ficha Técnica</a></li>
+                <li class="breadcrumb-item"><a>Editar</a></li>
+            </ol>
+        </div>
 
         <div class="page-content">
             <div class="panel">
@@ -258,117 +264,116 @@
 
 
                 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card">
 
 
-            @if (Auth::user()->tieneRole('Super Administrador'))
-            <form method="POSt" action="{{ route('ficha_tecnica.update',['ficha_tecnica'=>$ficha_tecnica->id]) }}">
-                    {{ method_field('PUT') }}
-                    @csrf
-                    <div class="form-group">
-                    <h2>Ficha Técnica</h2>
+
+                                @if (Auth::user()->tieneRole('Super Administrador'))
+                                <form method="POSt" action="{{ route('ficha_tecnica.update',['ficha_tecnica'=>$ficha_tecnica->id]) }}">
+                                    {{ method_field('PUT') }}
+                                    @csrf
+                                    <div class="form-group">
+                                        <h2>Ficha Técnica</h2>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="id" class="control-label">{{'Codigo'}}</label>
+                                        <input readonly type="number" class="form-control" name="id" value="{{ $ficha_tecnica->id }}" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="Num_Unidades" class="control-label">{{'Numero de Unidades'}}</label>
+                                        <input type="number" class="form-control" name="Num_Unidades" value="{{ $ficha_tecnica->Num_Unidades }}" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="tiempo" class="control-label">{{'Tiempo'}}</label>
+                                        <input type="text" class="form-control" name="tiempo" value="{{ $ficha_tecnica->tiempo }}" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="descripcion" class="control-label">{{'Descripción'}}</label>
+                                        <input type="text" class="form-control" name="descripcion" value="{{ $ficha_tecnica->descripcion }}" />
+                                    </div>
+                                    <br>
+
+                                    <button type="submit" class="btn btn-success" name="btnEnviar">Modificar</button>
+                                    <a class="btn btn-primary" href="{{ route('ficha_tecnica.index') }}">Volver</a><br><br>
+
+                                </form>
+                                @else
+                                <h1>Acción No Permitida</h1>
+                                @endif
+
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    
-                    <div class="form-group">
-                    <label for="id" class="control-label" >{{'Codigo'}}</label>  
-                    <input readonly type="number" class="form-control" name="id" value="{{ $ficha_tecnica->id }}" />
-                    </div>       
-                           
-                    <div class="form-group">
-                    <label for="Num_Unidades" class="control-label">{{'Numero de Unidades'}}</label> 
-                    <input type="number" class="form-control" name="Num_Unidades" value="{{ $ficha_tecnica->Num_Unidades }}" />
-                    </div>      
-                       
-                    <div class="form-group">
-                    <label for="tiempo" class="control-label">{{'Tiempo'}}</label> 
-                    <input type="text" class="form-control" name="tiempo" value="{{ $ficha_tecnica->tiempo }}" />
-                    </div> 
-                
-                    <div class="form-group">
-                    <label for="descripcion" class="control-label">{{'Descripción'}}</label>     
-                    <input type="text" class="form-control" name="descripcion" value="{{ $ficha_tecnica->descripcion }}" />
-                    </div>        
-                    <br>   
-          
-                    <button type="submit" class="btn btn-success" name="btnEnviar">Modificar</button>
-                    <a class="btn btn-primary" href="{{ route('ficha_tecnica.index') }}">Volver</a><br><br>
-                            
-                </form>
-               @else
-               <h1>Acción No Permitida</h1>
-               @endif
 
-            </div>
-        </div>
-    </div>
-</div>
+                <!-- End Page -->
 
-                
-    <!-- End Page -->
-    
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="site-footer-legal">© 2018 <a href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>
-        <div class="site-footer-right">
-            Crafted with <i class="red-600 icon md-favorite"></i> by <a href="https://themeforest.net/user/creation-studio">Creation Studio</a>
-        </div>
-    </footer>
-    <!-- Core  -->
-    <script src="../../global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
-    <script src="../../global/vendor/jquery/jquery.js"></script>
-    <script src="../../global/vendor/popper-js/umd/popper.min.js"></script>
-    <script src="../../global/vendor/bootstrap/bootstrap.js"></script>
-    <script src="../../global/vendor/animsition/animsition.js"></script>
-    <script src="../../global/vendor/mousewheel/jquery.mousewheel.js"></script>
-    <script src="../../global/vendor/asscrollbar/jquery-asScrollbar.js"></script>
-    <script src="../../global/vendor/asscrollable/jquery-asScrollable.js"></script>
-    <script src="../../global/vendor/waves/waves.js"></script>
+                <!-- Footer -->
+                <footer class="site-footer">
+                    <div class="site-footer-legal">© 2018 <a href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>
+                    <div class="site-footer-right">
+                        Crafted with <i class="red-600 icon md-favorite"></i> by <a href="https://themeforest.net/user/creation-studio">Creation Studio</a>
+                    </div>
+                </footer>
+                <!-- Core  -->
+                <script src="../../global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+                <script src="../../global/vendor/jquery/jquery.js"></script>
+                <script src="../../global/vendor/popper-js/umd/popper.min.js"></script>
+                <script src="../../global/vendor/bootstrap/bootstrap.js"></script>
+                <script src="../../global/vendor/animsition/animsition.js"></script>
+                <script src="../../global/vendor/mousewheel/jquery.mousewheel.js"></script>
+                <script src="../../global/vendor/asscrollbar/jquery-asScrollbar.js"></script>
+                <script src="../../global/vendor/asscrollable/jquery-asScrollable.js"></script>
+                <script src="../../global/vendor/waves/waves.js"></script>
 
-    <!-- Plugins -->
-    <script src="../../global/vendor/switchery/switchery.js"></script>
-    <script src="../../global/vendor/intro-js/intro.js"></script>
-    <script src="../../global/vendor/screenfull/screenfull.js"></script>
-    <script src="../../global/vendor/slidepanel/jquery-slidePanel.js"></script>
+                <!-- Plugins -->
+                <script src="../../global/vendor/switchery/switchery.js"></script>
+                <script src="../../global/vendor/intro-js/intro.js"></script>
+                <script src="../../global/vendor/screenfull/screenfull.js"></script>
+                <script src="../../global/vendor/slidepanel/jquery-slidePanel.js"></script>
 
-    <!-- Scripts -->
-    <script src="../../global/js/Component.js"></script>
-    <script src="../../global/js/Plugin.js"></script>
-    <script src="../../global/js/Base.js"></script>
-    <script src="../../global/js/Config.js"></script>
+                <!-- Scripts -->
+                <script src="../../global/js/Component.js"></script>
+                <script src="../../global/js/Plugin.js"></script>
+                <script src="../../global/js/Base.js"></script>
+                <script src="../../global/js/Config.js"></script>
 
-    <script src="../../js/Section/Menubar.js"></script>
-    <script src="../../js/Section/Sidebar.js"></script>
-    <script src="../../js/Section/PageAside.js"></script>
-    <script src="../../js/Plugin/menu.js"></script>
+                <script src="../../js/Section/Menubar.js"></script>
+                <script src="../../js/Section/Sidebar.js"></script>
+                <script src="../../js/Section/PageAside.js"></script>
+                <script src="../../js/Plugin/menu.js"></script>
 
-    <!-- Config -->
-    <script src="../../global/js/config/colors.js"></script>
-    <script src="../../js/config/tour.js"></script>
-    <script>
-        Config.set('assets', '../../assets');
-    </script>
+                <!-- Config -->
+                <script src="../../global/js/config/colors.js"></script>
+                <script src="../../js/config/tour.js"></script>
+                <script>
+                    Config.set('assets', '../../assets');
+                </script>
 
-    <!-- Page -->
-    <script src="../../js/Site.js"></script>
-    <script src="../../global/js/Plugin/asscrollable.js"></script>
-    <script src="../../global/js/Plugin/slidepanel.js"></script>
-    <script src="../../global/js/Plugin/switchery.js"></script>
+                <!-- Page -->
+                <script src="../../js/Site.js"></script>
+                <script src="../../global/js/Plugin/asscrollable.js"></script>
+                <script src="../../global/js/Plugin/slidepanel.js"></script>
+                <script src="../../global/js/Plugin/switchery.js"></script>
 
-    <script>
-        (function(document, window, $) {
-            'use strict';
+                <script>
+                    (function(document, window, $) {
+                        'use strict';
 
-            var Site = window.Site;
-            $(document).ready(function() {
-                Site.run();
-            });
-        })(document, window, jQuery);
-    </script>
+                        var Site = window.Site;
+                        $(document).ready(function() {
+                            Site.run();
+                        });
+                    })(document, window, jQuery);
+                </script>
 </body>
 
 </html>
-

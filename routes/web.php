@@ -22,6 +22,8 @@ Route::get('/', function () {
 
 Route::middleware('auth')->resource('user', 'UserController');
 
+Route::middleware('auth')->resource('acercade', 'AcercadeController');
+
 Route::middleware('auth')->resource('role', 'RoleController');
 Route::middleware('auth')->post('user/cambiarRole', 'UserController@cambiarRole');
 Route::middleware('auth')->post('user/guardarRole', 'UserController@guardarRole');

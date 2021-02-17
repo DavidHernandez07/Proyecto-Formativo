@@ -97,11 +97,12 @@
 
       <!-- Navbar Toolbar Right -->
       <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+       <!--
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" data-animation="scale-up" aria-expanded="false" role="button">
             <span class="flag-icon flag-icon-co"></span>
           </a>
-          <!--
+          
             <div class="dropdown-menu" role="menu">
               <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
                 <span class="flag-icon flag-icon-gb"></span> English</a>
@@ -114,8 +115,9 @@
               <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
                 <span class="flag-icon flag-icon-nl"></span> Dutch</a>
             </div>
-            -->
+            
         </li>
+        -->
         <li class="nav-item dropdown">
           <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
             <span class="avatar avatar-online">
@@ -183,7 +185,7 @@
       <div>
         <div>
           <ul class="site-menu" data-plugin="menu">
-            <li class="site-menu-item active">
+          <li class="site-menu-item active">
               <a class="animsition-link" href="{{url('/home')}}">
                 <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
                 <span class="site-menu-title">Inicio</span>
@@ -195,17 +197,18 @@
                 <span class="site-menu-title">Registro Panaderia</span>
               </a>
             </li>
-            @if (Auth::user()->tieneRole('Super Administrador'))
-            <li class="site-menu-item ">
-              <a class="animsition-link" href="{{route('role.index')}}">
-                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                <span class="site-menu-title">Gestion de Roles</span>
-              </a>
-            </li>
-            <li class="site-menu-item ">
+            <li class="site-menu-item">
               <a class="animsition-link" href="{{route('user.index')}}">
                 <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
                 <span class="site-menu-title">Gestion de Usuarios</span>
+              </a>
+            </li>
+            @if (Auth::user()->tieneRole('Super Administrador'))
+
+            <li class="site-menu-item ">
+              <a class="animsition-link" href="{{route('gestion_usuario.index')}}">
+                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                <span class="site-menu-title">Gestion de Empleados</span>
               </a>
             </li>
             @endif
@@ -219,6 +222,12 @@
               <a class="animsition-link" href="{{route('mano_de_obra.index')}}">
                 <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
                 <span class="site-menu-title">Mano de Obra</span>
+              </a>
+            </li>
+            <li class="site-menu-item">
+              <a class="animsition-link" href="{{route('cifs.index')}}">
+                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                <span class="site-menu-title">Gestión de Cifs</span>
               </a>
             </li>
             <li class="site-menu-item">
